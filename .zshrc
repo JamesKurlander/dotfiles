@@ -1,0 +1,32 @@
+export ZSH='/Users/james/.oh-my-zsh'
+
+# load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+DISABLE_AUTO_TITLE="true"
+ENABLE_CORRECTION="true"
+
+zstyle ':omz:update' mode auto
+
+source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+# set oh-my-posh theme
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/catppuccin_frappe.omp.json)"
+fi
+
+bindkey '^ ' autosuggest-accept
+bindkey '^J' down-line-or-search
+bindkey '^K' up-line-or-search
