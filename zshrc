@@ -1,4 +1,6 @@
-export ZSH='/Users/james/.oh-my-zsh'
+source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # load nvm
 export NVM_DIR="$HOME/.nvm"
@@ -9,10 +11,6 @@ DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
 
 zstyle ':omz:update' mode auto
-
-source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
