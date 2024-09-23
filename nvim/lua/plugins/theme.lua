@@ -1,10 +1,19 @@
 return {
-  "folke/tokyonight.nvim",
-  lazy = false,
-  config = function()
-      vim.g.tokyonight_style = "night"
-      vim.g.tokyonight_transparent = false
-      vim.g.tokyonight_lualine_bold = true
-      vim.cmd[[colorscheme tokyonight]]
-  end
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    opts = {
+      style = "night",
+      transparent = true,
+      terminal_colors = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd([[colorscheme tokyonight]])
+    end,
+  }
 }
