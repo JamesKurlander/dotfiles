@@ -23,7 +23,7 @@ return {
       cmdline = {
         format = {
           cmdline = {
-            title = "  BEEP BOOP  ",  -- Set a custom title for the command line popup
+            title = "  COMMAND  ",  -- Set a custom title for the command line popup
           },
           search_down = {
             title = "  Search ↘  ", -- Custom title for search (down)

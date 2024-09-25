@@ -1,14 +1,11 @@
 local colors = {
-  black        = '#282828',
-  white        = '#ebdbb2',
-  red          = '#fb4934',
-  green        = '#b8bb26',
-  blue         = '#83a598',
-  yellow       = '#fe8019',
-  gray         = '#a89984',
-  darkgray     = '#3c3836',
-  lightgray    = '#504945',
-  inactivegray = '#7c6f64',
+  blue = '#7aa3f7',
+  green = '#9dce6a',
+  orange = '#e0ae68',
+  purple = '#bb9af7',
+  darkGray = '#3a4361',
+  lightGray = '#a9b1d6',
+  black = '#15171e',
 }
 
 return {
@@ -20,35 +17,35 @@ return {
       options = {
         theme = {
           normal = {
-            a = {bg = colors.gray, fg = colors.black, gui = 'bold'},
-            b = {bg = colors.lightgray, fg = colors.white},
-            c = {bg = 'none', fg = colors.gray}
+            a = {bg = colors.blue, fg = colors.black, gui = 'bold'},
+            b = {bg = colors.darkGray, fg = colors.blue},
+            c = {bg = 'none', fg = colors.lightGray},
           },
           insert = {
-            a = {bg = colors.blue, fg = colors.black, gui = 'bold'},
-            b = {bg = colors.lightgray, fg = colors.white},
-            c = {bg = 'none', fg = colors.white}
+            a = {bg = colors.green, fg = colors.black, gui = 'bold'},
+            b = {bg = colors.darkGray, fg = colors.green},
+            c = {bg = 'none', fg = colors.lightGray},
           },
           visual = {
-            a = {bg = colors.yellow, fg = colors.black, gui = 'bold'},
-            b = {bg = colors.lightgray, fg = colors.white},
-            c = {bg = 'none', fg = colors.black}
+            a = {bg = colors.purple, fg = colors.black, gui = 'bold'},
+            b = {bg = colors.darkGray, fg = colors.purple},
+            c = {bg = 'none', fg = colors.lightGray},
           },
           replace = {
             a = {bg = colors.red, fg = colors.black, gui = 'bold'},
             b = {bg = colors.lightgray, fg = colors.white},
-            c = {bg = 'none', fg = colors.white}
+            c = {bg = 'none', fg = colors.white},
           },
           command = {
-            a = {bg = colors.green, fg = colors.black, gui = 'bold'},
-            b = {bg = colors.lightgray, fg = colors.white},
-            c = {bg = 'none', fg = colors.black}
+            a = {bg = colors.orange, fg = colors.black, gui = 'bold'},
+            b = {bg = colors.darkGray, fg = colors.orange},
+            c = {bg = 'none', fg = colors.lightGray},
           },
           inactive = {
             a = {bg = colors.darkgray, fg = colors.gray, gui = 'bold'},
             b = {bg = colors.darkgray, fg = colors.gray},
-            c = {bg = 'none', fg = colors.gray}
-          }
+            c = {bg = 'none', fg = colors.gray},
+          },
         },
         icons_enabled = true,
         section_separators = {'', ''},
