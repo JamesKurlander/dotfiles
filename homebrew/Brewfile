@@ -1,0 +1,13 @@
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/services"
+tap "jandedobbeleer/oh-my-posh"
+
+brew "neovim"
+brew "tmux"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+
+cask "google-chrome"
+cask "visual-studio-code"
