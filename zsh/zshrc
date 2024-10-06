@@ -20,10 +20,13 @@ else
   export EDITOR='nvim'
 fi
 
+PS1="%F{green}%D{%H:%M:%S} %F{yellow}%~ %F{red}  %f"
+#PS1=''
+
 # set oh-my-posh theme
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/catppuccin_frappe.omp.json)"
-fi
+#if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/catppuccin_frappe.omp.json)"
+#fi
 
 bindkey '^ ' autosuggest-accept
 bindkey '^J' down-line-or-search

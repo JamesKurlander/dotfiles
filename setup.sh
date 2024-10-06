@@ -22,11 +22,11 @@ else
 fi
 
 # Install problematic packages manually
-echo "Installing tpm"
-rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+#echo "Installing tpm"
+#rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-mkdir -p ~/.tmux/plugins/catppuccin
-git clone https://github.com/catppuccin/tmux.git ~/.tmux/plugins/catppuccin/tmux
+#mkdir -p ~/.tmux/plugins/catppuccin
+#git clone https://github.com/catppuccin/tmux.git ~/.tmux/plugins/catppuccin/tmux
 
 # Symlink for .zshrc
 if [[ -f "$HOME/.zshrc" || -L "$HOME/.zshrc" ]]; then
@@ -53,4 +53,4 @@ ln -sf "$DOTFILES_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
 echo "Symlinked .tmux.conf"
 
 # Refresh the terminal
-reset
+#reset

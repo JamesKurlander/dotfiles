@@ -1,10 +1,12 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jandedobbeleer/oh-my-posh"
+tap "arl/arl"
 
+brew "gitmux"
 brew "neovim"
 brew "tmux"
+brew "tpm"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
