@@ -1,6 +1,9 @@
 #!/bin/bash
 DOTFILES_DIR="$HOME/Repos/dotfiles"
 
+echo "Setting MacOS defaults..."
+sh $DOTFILES_DIR/osx/set-defaults.sh
+
 # Install Homebrew
 if ! command -v brew &>/dev/null; then
   echo "Homebrew is not installed. Installing Homebrew..."
