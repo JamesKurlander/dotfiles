@@ -48,12 +48,18 @@ return {
           },
         },
         icons_enabled = true,
-        section_separators = {'', ''},
-        component_separators = {'', ''},
+        --section_separators = {'', ''},
+        --component_separators = {'', ''},
       },
       sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_a = {
+          {
+            'mode',
+            separator = { left = '', right = '' },
+            padding = { left = 0, right = 0 },
+          }
+        },
+        lualine_b = {},
         lualine_c = {
           {
             'filename',
@@ -61,8 +67,20 @@ return {
           }
         },
         lualine_x = {},
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' },
+        lualine_y = {
+          {
+            'progress',
+             separator = { left = '' },
+             padding = { left = 0, right = 1 },
+          }
+        },
+        lualine_z = {
+          {
+            'location',
+             separator = { right = '' },
+             padding = { left = 0, right = 0 },
+          }
+        },
       },
       inactive_sections = {
         lualine_a = {},
@@ -70,7 +88,7 @@ return {
         lualine_c = { 'filename' },
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { 'location' },
+        lualine_z = {},
       },
       tabline = {},
       extensions = {},

@@ -3,6 +3,9 @@ return {
   config = function()
     local lspconfig = require("lspconfig");
 
+    -- Example: Set up a specific language server (e.g., pyright)
+    lspconfig.pyright.setup({})
+
     lspconfig.ts_ls.setup({});
     lspconfig.eslint.setup({});
 

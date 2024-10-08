@@ -20,6 +20,9 @@ vim.g.mapleader = " ";
 
 -- Setup lazy.nvim
 require("lazy").setup({
+  ui = {
+    border = "rounded" -- Can be 'single', 'double', 'rounded', 'solid', 'shadow'
+  },
   spec = {
     -- import your plugins
     { import = "plugins" },
