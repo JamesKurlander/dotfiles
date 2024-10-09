@@ -3,7 +3,7 @@ return {
   config = function()
     local lspconfig = require("lspconfig");
 
-    lspconfig.csslss.setup({});
+    lspconfig.cssls.setup({});
     lspconfig.graphql.setup({});
     lspconfig.html.setup({});
     lspconfig.lua_ls.setup({});
