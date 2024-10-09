@@ -26,10 +26,10 @@ return {
             title = "  COMMAND  ",  -- Set a custom title for the command line popup
           },
           search_down = {
-            title = "  Search ↘  ", -- Custom title for search (down)
+            title = "  Search 󰁃  ", -- Custom title for search (down)
           },
           search_up = {
-            title = "  Search ↖  ", -- Custom title for search (up)
+            title = "  Search 󰁜  ", -- Custom title for search (up)
           },
         },
       },

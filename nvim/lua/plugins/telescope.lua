@@ -5,6 +5,8 @@ return {
       require('telescope').setup({
         defaults = {
           prompt_prefix = ' 🔭 ',
+          selection_caret = ' ',
+
           mappings = {
             i = {
               ['<C-j>'] = require('telescope.actions').move_selection_next,
