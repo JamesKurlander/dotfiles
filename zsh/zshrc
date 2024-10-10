@@ -31,3 +31,5 @@ PS1="%F{green}%D{%H:%M:%S} %F{green}%~ %F{green}  %f"
 bindkey '^ ' autosuggest-accept
 bindkey '^J' down-line-or-search
 bindkey '^K' up-line-or-search
+bindkey '^H' backward-char
+bindkey '^L' forward-char
