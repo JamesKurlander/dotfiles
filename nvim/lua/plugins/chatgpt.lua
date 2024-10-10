@@ -14,10 +14,15 @@ return {
                 model = 'chatgpt-4o-latest',
             },
             chat = {
-                welcome_message = 'Ask me anything...'
+                welcome_message = 'Ask me anything...',
+                answer_sign = '🤖',
+                question_sign = '🤔',
             },
             popup_layout = {
                 default = 'right',
+                right = {
+                    width = '50%',
+                },
             },
             popup_window = {
                 border = {
