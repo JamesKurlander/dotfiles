@@ -1,6 +1,6 @@
 return {
     'ThePrimeagen/harpoon',
-    branch = 'harpoon2',
+    version = '*',
     dependencies = {
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope.nvim',
@@ -48,9 +48,9 @@ return {
         end, { desc = "Open Harpoon window with Telescope" })
 
         -- Additional Keybindings
-        vim.keymap.set("n", "<leader>a", function() mark.add_file() end, { desc = "Add file to Harpoon" })
-        vim.keymap.set("n", "<leader>d", function() mark.rm_file() end, { desc = "Remove file from Harpoon" })
-        vim.keymap.set("n", "<leader>hd", function() mark.clear_all() end, { desc = "Clear all files from Harpoon" })
+        vim.keymap.set("n", "<leader>ha", function() mark.add_file() end, { desc = "Add file to Harpoon" })
+        vim.keymap.set("n", "<leader>hd", function() mark.rm_file() end, { desc = "Remove file from Harpoon" })
+        vim.keymap.set("n", "<leader>hc", function() mark.clear_all() end, { desc = "Clear all files from Harpoon" })
 
         -- Navigate previous & next buffers in Harpoon
         vim.keymap.set("n", "<C-h>", function() ui.nav_prev() end, { desc = "Navigate to previous Harpoon file" })
