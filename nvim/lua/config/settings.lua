@@ -17,6 +17,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.laststatus = 2
+vim.opt.fillchars:append({ eob = " " })  -- Use a space to replace the tildes
 --vim.opt.colorcolumn = "80"
 vim.cmd([[
   highlight DashboardHeader guifg=#f1fa8c
