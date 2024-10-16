@@ -12,6 +12,7 @@ return {
             api_key_cmd = "echo $OPENAI_API_KEY",
             openai_params = {
                 model = 'chatgpt-4o-latest',
+                max_tokens = 4095,
             },
             chat = {
                 welcome_message = 'Ask me anything...',
@@ -31,6 +32,9 @@ return {
                     },
                 },
             },
+            popup_input = {
+                submit = '<Enter>',
+            }
         })
 
     vim.keymap.set("n", "<leader>cc", ':ChatGPT<CR>', { noremap = true, silent = true })
