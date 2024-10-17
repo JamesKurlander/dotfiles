@@ -1,6 +1,7 @@
 --vim.g.netrw_banner = 0
 vim.opt.guicursor = ""
 vim.opt.spelllang = "en_us"
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 2
@@ -20,8 +21,13 @@ vim.opt.laststatus = 2
 vim.opt.fillchars:append({
   eob = " ",
 })
+
 vim.cmd([[
   highlight DashboardHeader guifg=#f1fa8c
   highlight DashboardCenter guifg=#ff79c6
   highlight DashboardFooter guifg=#f8f8f2
 ]])
+
+vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#778899' })
+vim.api.nvim_set_hl(0, 'LineNr', { fg='white' })
+vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#778899' })
