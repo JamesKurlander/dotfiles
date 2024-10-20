@@ -1,7 +1,7 @@
 -- Vim
 vim.keymap.set('n', '<leader>th', ':set hlsearch!<CR>', { noremap = true, silent = true });
 vim.keymap.set('n', '<leader>ex', vim.cmd.Ex);
-vim.keymap.set('n', '<leader>q', vim.cmd.qa);
+vim.keymap.set('n', '<leader>q', ':qa!<CR>', { noremap = true, silent = true });
 
 -- Telescope
 local builtin = require('telescope.builtin')
@@ -46,3 +46,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts);
   end,
 });
+
+-- Noice
+vim.keymap.set('n', '<leader>p', function()
+  vim.diagnostic.open_float(nil, {
+      scope = "line",
+      focus = false,
+      border = "rounded",
+    })
+end, { noremap = true, silent = true })
