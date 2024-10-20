@@ -49,5 +49,12 @@ return {
         lsp_doc_border = false,
       },
     });
-  end
+
+  vim.diagnostic.config({
+      virtual_text = false,
+      underline = true,
+      signs = true,
+      update_in_insert = false,
+    })
+end
 }
