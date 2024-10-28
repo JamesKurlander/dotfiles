@@ -10,6 +10,7 @@ brew "tpm"
 brew "thefuck"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+brew "ncspot"
 
 cask "google-chrome"
 cask "visual-studio-code"
