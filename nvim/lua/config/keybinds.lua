@@ -1,7 +1,8 @@
 -- Vim
 vim.keymap.set('n', '<leader>th', ':set hlsearch!<CR>', { noremap = true, silent = true });
 vim.keymap.set('n', '<leader>ex', vim.cmd.Ex);
-vim.keymap.set('n', '<leader>q', ':wqa!<CR>', { noremap = true, silent = true });
+vim.keymap.set('n', '<leader>w', ':wa!<CR>', { noremap = true, silent = true });
+vim.keymap.set('n', '<leader>q', ':qa!<CR>', { noremap = true, silent = true });
 
 -- Telescope
 local builtin = require('telescope.builtin')
