@@ -9,6 +9,9 @@ return {
     require('notify').setup({
       render = 'compact',
       fps = 120,
+      on_open = function(win)
+        vim.api.nvim_win_set_config(win, { focusable = false })
+      end,
     });
 
     require('noice').setup({
@@ -25,10 +28,8 @@ return {
           },
         },
       },
-      notify = {
-        view = 'notify',
-      },
       messages = {
+        enabled = true,
         view = 'notify',
         view_error = 'notify',
         view_warn = 'notify',
