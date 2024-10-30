@@ -1,4 +1,4 @@
---vim.g.netrw_banner = 0
+-- vim.g.netrw_banner = 0
 vim.opt.guicursor = ""
 vim.opt.spelllang = "en_us"
 vim.opt.number = true

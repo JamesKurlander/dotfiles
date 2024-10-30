@@ -8,13 +8,10 @@ local colors = {
   black = '#15171e',
 }
 
-return {
-  'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
-  lazy = false,
-  config = function()
+function ConfigureLualine()
     require('lualine').setup {
       options = {
+        globalstatus = true,
         theme = {
           normal = {
             a = {bg = colors.blue, fg = colors.black, gui = 'bold'},
@@ -92,4 +89,10 @@ return {
       extensions = {},
     }
   end
+
+return {
+  'nvim-lualine/lualine.nvim',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  lazy = false,
+  config = ConfigureLualine,
 }
