@@ -58,6 +58,7 @@ function ConfigureLualine()
         lualine_c = {
           {
             'filename',
+            path = 1,
             color = { bg = 'none' },
           }
         },
