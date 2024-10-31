@@ -1,3 +1,5 @@
+vim.loader.enable()
+
 require("config.lazy");
 require("config.settings");
 require("config.keybinds");
