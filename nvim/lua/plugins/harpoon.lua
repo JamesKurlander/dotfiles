@@ -42,18 +42,13 @@ return {
                 }):find()
         end
 
-        -- Keybinding to toggle Telescope with Harpoon marks
         vim.keymap.set("n", "<leader>hh", function()
-            toggle_telescope(harpoon.get_mark_config().marks)
-        end, { desc = "Open Harpoon window with Telescope" })
-
-        -- Additional Keybindings
-        vim.keymap.set("n", "<leader>ha", function() mark.add_file() end, { desc = "Add file to Harpoon" })
-        vim.keymap.set("n", "<leader>hd", function() mark.rm_file() end, { desc = "Remove file from Harpoon" })
-        vim.keymap.set("n", "<leader>hc", function() mark.clear_all() end, { desc = "Clear all files from Harpoon" })
-
-        -- Navigate previous & next buffers in Harpoon
+            toggle_telescope(require('harpoon').get_mark_config().marks)
+        end, { desc = "Open Harpoon window with Telescope" });
+        vim.keymap.set("n", "<leader>ha", function() mark.add_file() end, { desc = "Add file to Harpoon" });
+        vim.keymap.set("n", "<leader>hd", function() mark.rm_file() end, { desc = "Remove file from Harpoon" });
+        vim.keymap.set("n", "<leader>hc", function() mark.clear_all() end, { desc = "Clear all files from Harpoon" });
         vim.keymap.set("n", "<C-h>", function() ui.nav_prev() end, { desc = "Navigate to previous Harpoon file" })
         vim.keymap.set("n", "<C-l>", function() ui.nav_next() end, { desc = "Navigate to next Harpoon file" })
-    end
+end
 }

@@ -1,8 +1,10 @@
+local settings = { noremap = true, silent = true };
+
 -- Vim
-vim.keymap.set('n', '<leader>th', ':set hlsearch!<CR>', { noremap = true, silent = true });
+vim.keymap.set('n', '<leader>th', ':set hlsearch!<CR>', settings);
 vim.keymap.set('n', '<leader>ex', vim.cmd.Ex);
-vim.keymap.set('n', '<leader>w', ':wa!<CR>', { noremap = true, silent = true });
-vim.keymap.set('n', '<leader>q', ':qa!<CR>', { noremap = true, silent = true });
+vim.keymap.set('n', '<leader>w', ':wa!<CR>', settings);
+vim.keymap.set('n', '<leader>q', ':qa!<CR>', settings);
 
 -- Telescope
 local builtin = require('telescope.builtin')
@@ -11,6 +13,12 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {});
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {});
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {});
 vim.keymap.set('n', '<leader>gc', builtin.git_commits, {});
+
+-- Obsidian
+vim.keymap.set('n', '<leader>og', ':ObsidianSearch<CR>', settings);
+vim.keymap.set('n', '<leader>oo', ':ObsidianQuickSwitch<CR>', settings);
+vim.keymap.set('n', '<leader>on', ':ObsidianNew<CR>', settings);
+vim.keymap.set('n', '<leader>or', ':ObsidianRename<CR>', settings);
 
 -- LSP
 vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev);
@@ -23,6 +31,7 @@ vim.diagnostic.config({
   signs = true,
   update_in_insert = false,
 });
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function(ev)
@@ -55,4 +64,4 @@ vim.keymap.set('n', '<leader>p', function()
       focus = false,
       border = "rounded",
     })
-end, { noremap = true, silent = true })
+end, settings)
