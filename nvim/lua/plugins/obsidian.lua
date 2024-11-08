@@ -7,7 +7,7 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
-    disable_frontmatter = true,
+    disable_frontmatter = false,
     note_id_func = function(title)
       local suffix = ""
       if title ~= nil then
