@@ -19,6 +19,7 @@ vim.keymap.set('n', '<leader>og', ':ObsidianSearch<CR>', settings);
 vim.keymap.set('n', '<leader>oo', ':ObsidianQuickSwitch<CR>', settings);
 vim.keymap.set('n', '<leader>on', ':ObsidianNew<CR>', settings);
 vim.keymap.set('n', '<leader>or', ':ObsidianRename<CR>', settings);
+vim.keymap.set('n', '<leader>ol', ':ObsidianLink<CR>', settings);
 
 -- LSP
 vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev);
