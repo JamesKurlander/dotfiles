@@ -19,7 +19,14 @@ vim.keymap.set('n', '<leader>og', ':ObsidianSearch<CR>', settings);
 vim.keymap.set('n', '<leader>oo', ':ObsidianQuickSwitch<CR>', settings);
 vim.keymap.set('n', '<leader>on', ':ObsidianNew<CR>', settings);
 vim.keymap.set('n', '<leader>or', ':ObsidianRename<CR>', settings);
-vim.keymap.set('n', '<leader>ol', ':ObsidianLink<CR>', settings);
+vim.keymap.set('n', '<leader>ow', ':ObsidianWorkspace<CR>', settings);
+vim.keymap.set('n', '<leader>oll', ':ObsidianLinks<CR>', settings);
+vim.keymap.set('v', '<leader>oe', ':ObsidianExtractNote<CR>', settings);
+vim.keymap.set('v', '<leader>oln', ':ObsidianLinkNew<CR>', settings);
+vim.keymap.set('v', '<leader>ole', function()
+  local link_text = vim.fn.input("Note Name")
+  vim.cmd('ObsidianLink ' .. link_text)
+end, { noremap = true, silent = true })
 
 -- LSP
 vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev);
