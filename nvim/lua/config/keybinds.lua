@@ -5,6 +5,13 @@ vim.keymap.set('n', '<leader>th', ':set hlsearch!<CR>', settings);
 vim.keymap.set('n', '<leader>ex', vim.cmd.Ex);
 vim.keymap.set('n', '<leader>w', ':wa!<CR>', settings);
 vim.keymap.set('n', '<leader>q', ':qa!<CR>', settings);
+vim.keymap.set('n', '<leader>df', function()
+  vim.diagnostic.open_float(nil, {
+      scope = "line",
+      focus = false,
+      border = "rounded",
+    })
+end, settings)
 
 -- Telescope
 local builtin = require('telescope.builtin')
@@ -64,12 +71,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts);
   end,
 });
-
--- Noice
-vim.keymap.set('n', '<leader>p', function()
-  vim.diagnostic.open_float(nil, {
-      scope = "line",
-      focus = false,
-      border = "rounded",
-    })
-end, settings)
