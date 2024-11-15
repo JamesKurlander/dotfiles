@@ -2,5 +2,5 @@
 
 song=$(nc -U /tmp/ncspot-502/ncspot.sock | jq -r '.playable.title + " by " + (.playable.artists[0])')
 if [ -n "$song" ]; then
-  echo "🎧 $song"
+  echo "▶ $song"
 fi

@@ -1,4 +1,5 @@
 -- vim.g.netrw_banner = 0
+vim.opt.background = "dark"
 vim.opt.conceallevel = 2
 vim.opt.guicursor = ""
 vim.opt.spelllang = "en_us"
