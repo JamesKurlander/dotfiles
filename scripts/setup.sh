@@ -1,6 +1,17 @@
 #!/bin/bash
 DOTFILES_DIR="$HOME/Repos/dotfiles"
 
+personal_flag=false
+
+while getopts "p" flag; do
+  case "${flag}" in
+    p) personal_flag=true ;;
+    *) 
+       echo "Invalid option: -$OPTARG" 
+       exit 1 ;;
+  esac
+done
+
 echo "Setting MacOS defaults..."
 sh $DOTFILES_DIR/osx/set-defaults.sh
 
@@ -17,11 +28,18 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Install Homebrew packages
 brew tap homebrew/bundle
 
-if [[ -f "$DOTFILES_DIR/homebrew/Brewfile" ]]; then
-  echo "Installing from Brewfile..."
-  brew bundle --file="$DOTFILES_DIR/homebrew/Brewfile"
+if [[ -f "$DOTFILES_DIR/homebrew/Brewfile.work" ]]; then
+  echo "Installing from Brewfile.work..."
+  brew bundle --file="$DOTFILES_DIR/homebrew/Brewfile.work"
 else
-  echo "Brewfile not found in dotfiles directory."
+  echo "Brewfile.work not found in dotfiles directory."
+fi
+
+if [[ "$personal_flag" == true && -f "$DOTFILES_DIR/homebrew/Brewfile.personal" ]]; then
+  echo "Installing from Brewfile.personal..."
+  brew bundle --file="$DOTFILES_DIR/homebrew/Brewfile.personal"
+else
+  echo "Brewfile.personal not found in dotfiles directory."
 fi
 
 # Install problematic packages manually
