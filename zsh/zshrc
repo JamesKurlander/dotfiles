@@ -29,3 +29,5 @@ bindkey '^L' forward-char
 bindkey '^D' kill-whole-line
 
 eval $(thefuck --alias f)
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"

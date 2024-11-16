@@ -1,4 +1,3 @@
--- vim.g.netrw_banner = 0
 vim.opt.cmdheight = 0
 vim.opt.background = "dark"
 vim.opt.conceallevel = 2
