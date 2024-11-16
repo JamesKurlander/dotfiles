@@ -22,7 +22,7 @@ return {
 
             require("telescope.pickers").new({}, {
                     prompt_title = "Harpoon",
-                    prompt_prefix = ' 🔱 ',
+                    prompt_prefix = ' ',
                     finder = require("telescope.finders").new_table({
                             results = file_paths,
                         }),

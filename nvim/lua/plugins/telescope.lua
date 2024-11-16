@@ -4,6 +4,7 @@ return {
   config = function()
     require('telescope').setup({
       defaults = {
+        disable_devicons = true,
         vimgrep_arguments = {
           "rg",
           "--color=never",
@@ -21,8 +22,8 @@ return {
           '--hidden',
           '--glob', '!**/.git/*'
         },
-        prompt_prefix = ' 🔭 ',
-        selection_caret = ' ',
+        prompt_prefix = ' ',
+        selection_caret = ' → ',
         mappings = {
           i = {
             ['<C-j>'] = require('telescope.actions').move_selection_next,
