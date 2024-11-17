@@ -1,4 +1,4 @@
 return {
     'tpope/vim-obsession',
-    event = 'VeryLazy',
+    lazy = false,
 }

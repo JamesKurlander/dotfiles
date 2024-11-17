@@ -26,18 +26,6 @@ if session then
   vim.cmd('source ' .. session)
 end
 
-vim.api.nvim_create_autocmd("VimEnter", {
-  pattern = "*",
-  callback = function()
-    -- Check if Obsession is available before running
-    if vim.fn.exists(":Obsession") == 2 then
-      vim.cmd("Obsession")
-    else
-      print("Obsession plugin not loaded.")
-    end
-  end,
-})
-
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = false, underline = true, sp = "#FF0000" })
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = false, underline = true, sp = "#FFA500" }) -- Optional: Orange for warnings
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = false, underline = true, sp = "#00FFFF" }) -- Optional: Cyan for info
