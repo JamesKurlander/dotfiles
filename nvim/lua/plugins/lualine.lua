@@ -50,7 +50,7 @@ function ConfigureLualine()
         lualine_a = {
           {
             'mode',
-            separator = { left = '▐', right = '▌' },
+            separator = { left = '█', right = '█' },
             padding = { left = 0, right = 0 },
           }
         },
@@ -66,14 +66,14 @@ function ConfigureLualine()
         lualine_y = {
           {
             'progress',
-             separator = { left = '▐' },
+             separator = { left = '█' },
              padding = { left = 0, right = 1 },
           }
         },
         lualine_z = {
           {
             'location',
-             separator = { right = '▌' },
+             separator = { right = '█' },
              padding = { left = 0, right = 0 },
           }
         },
