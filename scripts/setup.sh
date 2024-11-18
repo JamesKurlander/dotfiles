@@ -73,5 +73,13 @@ fi
 ln -sf "$DOTFILES_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
 echo "Symlinked .tmux.conf"
 
+# Symlink for spotify-player
+if [[ -f "$HOME/.config/spotify-player/app.toml" || -L "$HOME/.config/spotify-player/app.toml" ]]; then
+    echo "Backing up existing /spotify-player/app.toml to /spotify-player/app.toml"
+    mv "$HOME/.config/spotify-player/app.toml" "$HOME/.config/spotify-player/app.toml.bak"
+fi
+ln -sf "$DOTFILES_DIR/spotify-player/app.toml" "$HOME/.config/spotify-player/app.toml"
+echo "Symlinked spotify-player/app.toml"
+
 # Refresh the terminal
 #reset

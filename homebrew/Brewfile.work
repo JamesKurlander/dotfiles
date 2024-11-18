@@ -10,7 +10,7 @@ brew "tpm"
 brew "thefuck"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-brew "ncspot"
+brew "spotify_player"
 brew "lazygit"
 brew "httpie"
 
