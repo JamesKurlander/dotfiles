@@ -1,6 +1,4 @@
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -11,7 +9,7 @@ ENABLE_CORRECTION="true"
 
 zstyle ':omz:update' mode auto
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git)
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -30,4 +28,5 @@ bindkey '^D' kill-whole-line
 
 eval $(thefuck --alias f)
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
