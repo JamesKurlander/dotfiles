@@ -6,9 +6,15 @@ status_line=" | "
 if [ -n "$playback_info" ]; then
   artist_name=$(echo "$playback_info" | jq -r '.item.artists[0].name')
   song_name=$(echo "$playback_info" | jq -r '.item.name')
+
+  if [ "$song_name" = "null" ]; then
+    exit 0
+  fi
+
   is_playing=$(echo "$playback_info" | jq -r '.is_playing')
   shuffle_state=$(echo "$playback_info" | jq -r '.shuffle_state')
   repeat_state=$(echo "$playback_info" | jq -r '.repeat_state')
+
   progress_ms=$(echo "$playback_info" | jq -r '.progress_ms')
   duration_ms=$(echo "$playback_info" | jq -r '.item.duration_ms')
 
@@ -36,7 +42,7 @@ if [ -n "$playback_info" ]; then
     status_line+="⏸ "
   fi
 
-  status_line+="$artist_name - $song_name [$progress_formatted / $duration_formatted]"
+  status_line+="$artist_name - $song_name [$progress_formatted/$duration_formatted]"
 
   echo "$status_line"
 fi
