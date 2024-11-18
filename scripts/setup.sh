@@ -42,13 +42,6 @@ else
   echo "Brewfile.personal not found in dotfiles directory."
 fi
 
-# Install problematic packages manually
-#echo "Installing tpm"
-#rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-#mkdir -p ~/.tmux/plugins/catppuccin
-#git clone https://github.com/catppuccin/tmux.git ~/.tmux/plugins/catppuccin/tmux
-
 # Symlink for .zshrc
 if [[ -f "$HOME/.zshrc" || -L "$HOME/.zshrc" ]]; then
   echo "Backing up existing .zshrc to .zshrc.bak"
