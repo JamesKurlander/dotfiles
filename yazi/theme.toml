@@ -1,6 +1,24 @@
 [status]
 separator_open  = ""
 separator_close = ""
+separator_style = { fg = "black", bg = "black" }
+
+# Mode
+mode_normal = { fg="black", bg = "green" }
+mode_select = { fg="black", bg = "yellow" }
+mode_unset  = { fg="black", bg = "red" }
+
+# Progress
+progress_label  = { fg = "yellow", bg = "red" }
+progress_normal = { fg = "black", bg = "red" }
+progress_error  = { fg = "red", bg = "black" }
+
+# Permissions
+permissions_t = { fg = "green" }
+permissions_r = { fg = "green" }
+permissions_w = { fg = "green" }
+permissions_x = { fg = "green" }
+permissions_s = { fg = "green" }
 
 [icon]
 globs = []
@@ -8,3 +26,6 @@ dirs  = []
 files = []
 exts  = []
 conds = []
+
+[manager]
+cwd = { fg = "green" }

@@ -5,7 +5,7 @@ local colors = {
   purple = '#bb9af7',
   darkGray = '#3a4361',
   lightGray = '#a9b1d6',
-  black = '#15171e',
+  black = '#14161b',
 }
 
 function ConfigureLualine()

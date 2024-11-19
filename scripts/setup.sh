@@ -74,5 +74,8 @@ fi
 ln -sf "$DOTFILES_DIR/spotify-player/app.toml" "$HOME/.config/spotify-player/app.toml"
 echo "Symlinked spotify-player/app.toml"
 
+# Symlink for yazi
+ln -sf "$DOTFILES_DIR/yazi" "$HOME/.config/yazi"
+
 # Refresh the terminal
 #reset
