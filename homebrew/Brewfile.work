@@ -13,6 +13,7 @@ brew "zsh-syntax-highlighting"
 brew "spotify_player"
 brew "lazygit"
 brew "httpie"
+brew "yazi"
 
 cask "google-chrome"
 cask "visual-studio-code"
