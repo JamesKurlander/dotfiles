@@ -1,11 +1,18 @@
 local colors = {
-  blue = '#7aa3f7',
-  green = '#9dce6a',
-  orange = '#e0ae68',
-  purple = '#bb9af7',
-  darkGray = '#3a4361',
-  lightGray = '#a9b1d6',
-  black = '#14161b',
+  moonstone = '#72B5C1',
+  green = '#00e49a',
+  orange = '#fbc300',
+  red = '#ef766d',
+  darkGray = '#2A2F3E',
+  lightGray = '#B0BACF',
+  black = '#14161B',
+
+  blue = '#5B8ED3',
+  purple = '#A07BEF',
+  teal = '#4DD2C1',
+  yellow = '#FFE17A',
+  pink = '#FF9FB0',
+  white = '#F4F5F7',
 }
 
 function ConfigureLualine()
@@ -14,8 +21,8 @@ function ConfigureLualine()
         globalstatus = true,
         theme = {
           normal = {
-            a = {bg = colors.blue, fg = colors.black, gui = 'bold'},
-            b = {bg = colors.darkGray, fg = colors.blue},
+            a = {bg = colors.moonstone, fg = colors.black, gui = 'bold'},
+            b = {bg = colors.darkGray, fg = colors.moonstone},
             c = {bg = 'none', fg = colors.lightGray},
           },
           insert = {
@@ -24,24 +31,19 @@ function ConfigureLualine()
             c = {bg = 'none', fg = colors.lightGray},
           },
           visual = {
-            a = {bg = colors.purple, fg = colors.black, gui = 'bold'},
-            b = {bg = colors.darkGray, fg = colors.purple},
+            a = {bg = colors.pink, fg = colors.black, gui = 'bold'},
+            b = {bg = colors.darkGray, fg = colors.pink},
             c = {bg = 'none', fg = colors.lightGray},
           },
           replace = {
             a = {bg = colors.red, fg = colors.black, gui = 'bold'},
-            b = {bg = colors.lightgray, fg = colors.white},
-            c = {bg = 'none', fg = colors.white},
+            b = {bg = colors.darkGray, fg = colors.red},
+            c = {bg = 'none', fg = colors.lightGray},
           },
           command = {
             a = {bg = colors.orange, fg = colors.black, gui = 'bold'},
             b = {bg = colors.darkGray, fg = colors.orange},
             c = {bg = 'none', fg = colors.lightGray},
-          },
-          inactive = {
-            a = {bg = colors.darkgray, fg = colors.gray, gui = 'bold'},
-            b = {bg = colors.darkgray, fg = colors.gray},
-            c = {bg = 'none', fg = colors.gray},
           },
         },
         icons_enabled = true,
@@ -77,14 +79,6 @@ function ConfigureLualine()
              padding = { left = 0, right = 0 },
           }
         },
-      },
-      inactive_sections = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = { 'filename' },
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
       },
       tabline = {},
       extensions = {},
