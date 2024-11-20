@@ -3,16 +3,10 @@ local colors = {
   green = '#00e49a',
   orange = '#fbc300',
   red = '#ef766d',
+  pink = '#FF9FB0',
   darkGray = '#2A2F3E',
   lightGray = '#B0BACF',
   black = '#14161B',
-
-  blue = '#5B8ED3',
-  purple = '#A07BEF',
-  teal = '#4DD2C1',
-  yellow = '#FFE17A',
-  pink = '#FF9FB0',
-  white = '#F4F5F7',
 }
 
 function ConfigureLualine()
