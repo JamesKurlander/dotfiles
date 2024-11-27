@@ -2,7 +2,6 @@ local settings = { noremap = true, silent = true };
 
 -- Vim
 vim.keymap.set('n', '<leader>th', ':set hlsearch!<CR>', settings);
-vim.keymap.set('n', '<leader>ex', vim.cmd.Ex);
 vim.keymap.set('n', '<leader>w', ':wa!<CR>', settings);
 vim.keymap.set('n', '<leader>q', ':qa!<CR>', settings);
 vim.keymap.set('n', '<leader>df', function()
