@@ -1,4 +1,6 @@
 -- vim.opt.cmdheight = 0
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.background = "dark"
 vim.opt.conceallevel = 2
 vim.opt.guicursor = ""
