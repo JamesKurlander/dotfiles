@@ -29,6 +29,7 @@ brew "gping"
 brew "speedtest-cli"
 brew "newsboat"
 brew "ngrok"
+brew "weechat"
 
 cask "google-chrome"
 cask "visual-studio-code"
