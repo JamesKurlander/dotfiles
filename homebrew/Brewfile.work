@@ -30,6 +30,7 @@ brew "speedtest-cli"
 brew "newsboat"
 brew "ngrok"
 brew "weechat"
+brew "pyenv"
 
 cask "visual-studio-code"
 cask "obsidian"
