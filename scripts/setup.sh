@@ -58,6 +58,7 @@ echo "Symlinked yazi"
 
 # Symlink for newsboat
 ln -sf "$DOTFILES_DIR/newsboat/urls" "$HOME/.newsboat/urls"
+ln -sf "$DOTFILES_DIR/newsboat/config" "$HOME/.newsboat/config"
 echo "Symlinked newsboat"
 
 # Refresh the terminal

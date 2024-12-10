@@ -1,0 +1,16 @@
+color title green black bold underline
+
+color listnormal green black
+color listnormal_unread green black
+color listfocus black green
+color listfocus_unread black green
+
+color article green black
+
+color info black black
+color end-of-text-marker black black invis
+
+bind-key ESC hard-quit
+bind-key BACKSPACE quit
+bind-key j down
+bind-key k up
