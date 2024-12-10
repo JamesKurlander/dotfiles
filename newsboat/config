@@ -12,5 +12,11 @@ color end-of-text-marker black black invis
 
 bind-key ESC hard-quit
 bind-key BACKSPACE quit
+
 bind-key j down
+bind-key d pagedown
 bind-key k up
+bind-key u pageup
+
+bind-key g home
+bind-key G end
