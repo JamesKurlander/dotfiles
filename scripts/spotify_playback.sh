@@ -1,7 +1,7 @@
 #!/bin/bash
 
 playback_info=$(spotify_player get key playback)
-status_line=" | "
+status_line=" "
 
 if [ -n "$playback_info" ]; then
   artist_name=$(echo "$playback_info" | jq -r '.item.artists[0].name')
@@ -26,18 +26,18 @@ if [ -n "$playback_info" ]; then
   progress_formatted=$(printf "%d:%02d" $progress_min $progress_sec)
   duration_formatted=$(printf "%d:%02d" $duration_min $duration_sec)
 
-  if [ "$shuffle_state" = true ]; then
-    status_line+="S "
-  fi
-
-  if [ "$repeat_state" = "track" ]; then
-    status_line+="↺T "
-  elif [ "$repeat_state" = "context" ]; then
-    status_line+="↺C "
-  fi
+  # if [ "$repeat_state" = "track" ]; then
+  #   status_line+="↺T "
+  # elif [ "$repeat_state" = "context" ]; then
+  #   status_line+="↺C "
+  # fi
 
   if [ "$is_playing" = "true" ]; then
-    status_line+="▶ "
+    if [ "$shuffle_state" = true ]; then
+      status_line+="▶ "
+    else
+      status_line+="▷ "
+    fi
   else
     status_line+="⏸ "
   fi
