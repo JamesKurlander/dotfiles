@@ -26,18 +26,13 @@ bindkey '^H' backward-char
 bindkey '^L' forward-char
 bindkey '^D' kill-whole-line
 
-idle_cmd="cmatrix -s -C red"
-idle_time=60
-
 function idle_trigger {
-  if is_tmux_active; then
-    eval "$idle_cmd"
-    zle reset-prompt
-  fi
+  eval "cmatrix -s -C red"
+  zle reset-prompt
 }
 
 function start_idle_timer {
-  TMOUT=$idle_time
+  TMOUT=60
   TRAPALRM() { idle_trigger }
 }
 

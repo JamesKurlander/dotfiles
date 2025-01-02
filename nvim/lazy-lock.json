@@ -1,5 +1,5 @@
 {
-  "CopilotChat.nvim": { "branch": "canary", "commit": "451d365928a994cda3505a84905303f790e28df8" },
+  "CopilotChat.nvim": { "branch": "main", "commit": "2ebe591cff06018e265263e71e1dbc4c5aa8281e" },
   "copilot.vim": { "branch": "release", "commit": "87038123804796ca7af20d1b71c3428d858a9124" },
   "gitsigns.nvim": { "branch": "main", "commit": "5f808b5e4fef30bd8aca1b803b4e555da07fc412" },
   "harpoon": { "branch": "master", "commit": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3" },
@@ -12,7 +12,6 @@
   "obsidian.nvim": { "branch": "main", "commit": "ae1f76a75c7ce36866e1d9342a8f6f5b9c2caf9b" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "telescope.nvim": { "branch": "master", "commit": "2eca9ba22002184ac05eddbe47a7fe2d5a384dfc" },
-  "vim-fugitive": { "branch": "master", "commit": "174230d6a7f2df94705a7ffd8d5413e27ec10a80" },
   "vim-obsession": { "branch": "master", "commit": "ed9dfc7c2cc917ace8b24f4f9f80a91e05614b63" },
   "vim-polyglot": { "branch": "master", "commit": "f5393cfee07aeb666f4d75f9b3a83163862fb094" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
