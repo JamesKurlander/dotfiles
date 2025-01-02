@@ -19,10 +19,6 @@ fi
 
 PS1="%F{green}%D{%H:%M:%S} %F{green}%~ %F{green}→ %f"
 
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
-
 bindkey '^ ' autosuggest-accept
 bindkey '^J' down-line-or-search
 bindkey '^K' up-line-or-search
