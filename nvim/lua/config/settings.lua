@@ -30,6 +30,8 @@ vim.cmd([[
   highlight DashboardHeader guifg=#f1fa8c
   highlight DashboardCenter guifg=#ff79c6
   highlight DashboardFooter guifg=#f8f8f2
+  highlight Normal guibg=NONE ctermbg=NONE
+  highlight NonText guibg=NONE ctermbg=NONE
 ]])
 
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#778899' })

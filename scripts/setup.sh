@@ -36,30 +36,40 @@ else
   echo "Brewfile.personal not found in dotfiles directory."
 fi
 
-# Symlink for .zshrc
+# Symlink for ghostty
+rm -rf "$HOME/.config/ghostty"
+ln -sf "$DOTFILES_DIR/ghostty" "$HOME/.config/ghostty"
+echo "Symlinked ghostty config"
+
+# Symlink for zsh
+rm -rf "$HOME/.zshrc"
 ln -sf "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
-echo "Symlinked .zshrc"
+echo "Symlinked zsh config"
 
-# Symlink for Neovim
+# Symlink for neovim
+rm -rf "$HOME/.config/nvim"
 ln -sf "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
-echo "Symlinked Neovim config"
+echo "Symlinked neovim config"
 
-# Symlink for tmux.conf
+# Symlink for tmux
+rm -rf "$HOME/.tmux.conf"
 ln -sf "$DOTFILES_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
-echo "Symlinked .tmux.conf"
+echo "Symlinked tmux config"
 
 # Symlink for spotify-player
-ln -sf "$DOTFILES_DIR/spotify-player/app.toml" "$HOME/.config/spotify-player/app.toml"
-echo "Symlinked spotify-player/app.toml"
+rm -rf "$HOME/.config/spotify-player"
+ln -sf "$DOTFILES_DIR/spotify-player" "$HOME/.config/spotify-player"
+echo "Symlinked spotify-player config"
 
 # Symlink for yazi
+rm -rf "$HOME/.config/yazi"
 ln -sf "$DOTFILES_DIR/yazi" "$HOME/.config/yazi"
-echo "Symlinked yazi"
+echo "Symlinked yazi config"
 
 # Symlink for newsboat
-ln -sf "$DOTFILES_DIR/newsboat/urls" "$HOME/.newsboat/urls"
-ln -sf "$DOTFILES_DIR/newsboat/config" "$HOME/.newsboat/config"
-echo "Symlinked newsboat"
+rm -rf "$HOME/.newsboat"
+ln -sf "$DOTFILES_DIR/newsboat" "$HOME/.newsboat"
+echo "Symlinked newsboat config"
 
 # Refresh the terminal
 #reset
